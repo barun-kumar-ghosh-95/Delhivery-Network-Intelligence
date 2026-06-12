@@ -1,9 +1,0 @@
-{
-  "num_nodes": 1590,
-  "num_edges": 2508,
-  "density": 0.0009926736882102188,
-  "num_communities": 105,
-  "num_articulation_points": 370,
-  "num_bridges": 539,
-  "avg_clustering": 0.28144788015566863
-}
