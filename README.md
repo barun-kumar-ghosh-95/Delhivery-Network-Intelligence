@@ -2,11 +2,8 @@
 
 This repository contains the complete codebase, dashboard, and documentation for the graph-based network intelligence system built to optimize delivery ETAs for the logistics network.
 
-## 🚀 Live Dashboard (Localhost)
-
-The production-ready web application is configured to run locally. You can access the fully functional, interactive BI dashboard by clicking the link below (ensure the Streamlit server is running):
-
-> **[🌍 OPEN DASHBOARD: http://localhost:8501](http://localhost:8501)**
+Live Dashboard:
+http://localhost:8501
 
 ## Project Structure
 - `dashboard/`: Streamlit source code for the interactive BI application.
