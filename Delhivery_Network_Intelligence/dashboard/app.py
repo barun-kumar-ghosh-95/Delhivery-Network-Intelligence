@@ -194,7 +194,7 @@ st.sidebar.markdown("""
 """, unsafe_allow_html=True)
 
 # Load data helper
-@st.cache_data
+@st.cache_resource
 def load_dashboard_data():
     """Load all pre-computed data for dashboard."""
     import json
