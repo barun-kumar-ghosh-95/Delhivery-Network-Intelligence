@@ -133,55 +133,56 @@ st.markdown("""
         background: rgba(99, 102, 241, 0.15);
         border-radius: 8px;
     }
+    
+    /* Style the radio buttons to look like a premium menu */
+    div[role="radiogroup"] > label {
+        padding: 0.75rem 1rem;
+        background: transparent;
+        border-radius: 8px;
+        transition: all 0.2s ease;
+        margin-bottom: 0.25rem;
+        cursor: pointer;
+    }
+    div[role="radiogroup"] > label:hover {
+        background: rgba(99, 102, 241, 0.1);
+    }
+    div[role="radiogroup"] > label[data-checked="true"] {
+        background: rgba(99, 102, 241, 0.2);
+        border-left: 4px solid #818cf8;
+    }
+    /* Hide the actual radio circle */
+    div[role="radiogroup"] > label > div:first-child {
+        display: none;
+    }
+    div[role="radiogroup"] > label > div:last-child {
+        margin-left: 0;
+        color: #cbd5e1;
+        font-weight: 500;
+        font-size: 1.05rem;
+    }
+    div[role="radiogroup"] > label[data-checked="true"] > div:last-child {
+        color: #ffffff;
+        font-weight: 600;
+    }
 </style>
 """, unsafe_allow_html=True)
 
 # Sidebar navigation
-from streamlit_option_menu import option_menu
+st.sidebar.markdown('<h1 style="text-align: center; color: #818cf8; margin-bottom: 2rem;">Delhivery Intelligence</h1>', unsafe_allow_html=True)
 
-with st.sidebar:
-    st.markdown('<h1 style="text-align: center; color: #818cf8; margin-bottom: 2rem;">Delhivery Intelligence</h1>', unsafe_allow_html=True)
-    
-    page = option_menu(
-        menu_title=None,
-        options=[
-            "Network Overview",
-            "Why Graph Wins",
-            "ETA Predictor",
-            "Bottleneck Monitor",
-            "Corridor Intelligence",
-            "FTL vs Carting",
-            "Network Operations Command Center"
-        ],
-        icons=[
-            'globe', 
-            'diagram-3', 
-            'clock-history', 
-            'exclamation-triangle', 
-            'signpost-split', 
-            'truck', 
-            'briefcase'
-        ],
-        menu_icon="cast",
-        default_index=0,
-        styles={
-            "container": {"padding": "0!important", "background-color": "transparent"},
-            "icon": {"color": "#818cf8", "font-size": "18px"}, 
-            "nav-link": {
-                "font-size": "15px", 
-                "text-align": "left", 
-                "margin": "0px", 
-                "--hover-color": "rgba(99, 102, 241, 0.1)",
-                "color": "#cbd5e1"
-            },
-            "nav-link-selected": {
-                "background-color": "rgba(99, 102, 241, 0.2)", 
-                "color": "#ffffff",
-                "border-left": "4px solid #818cf8",
-                "font-weight": "600"
-            },
-        }
-    )
+page = st.sidebar.radio(
+    "Navigate",
+    [
+        "Network Overview",
+        "Why Graph Wins",
+        "ETA Predictor",
+        "Bottleneck Monitor",
+        "Corridor Intelligence",
+        "FTL vs Carting",
+        "Network Operations Command Center"
+    ],
+    label_visibility="collapsed"
+)
 
 st.sidebar.markdown("---")
 st.sidebar.markdown("""
