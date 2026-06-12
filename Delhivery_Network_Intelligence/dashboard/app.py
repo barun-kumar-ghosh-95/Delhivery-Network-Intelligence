@@ -137,22 +137,51 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # Sidebar navigation
-st.sidebar.markdown("# Delhivery Intelligence")
-st.sidebar.markdown("---")
+from streamlit_option_menu import option_menu
 
-page = st.sidebar.radio(
-    "Navigate",
-    [
-        "Network Overview",
-        "Why Graph Wins",
-        "ETA Predictor",
-        "Bottleneck Monitor",
-        "Corridor Intelligence",
-        "FTL vs Carting",
-        "Network Operations Command Center",
-    ],
-    label_visibility="collapsed",
-)
+with st.sidebar:
+    st.markdown('<h1 style="text-align: center; color: #818cf8; margin-bottom: 2rem;">Delhivery Intelligence</h1>', unsafe_allow_html=True)
+    
+    page = option_menu(
+        menu_title=None,
+        options=[
+            "Network Overview",
+            "Why Graph Wins",
+            "ETA Predictor",
+            "Bottleneck Monitor",
+            "Corridor Intelligence",
+            "FTL vs Carting",
+            "Network Operations Command Center"
+        ],
+        icons=[
+            'globe', 
+            'diagram-3', 
+            'clock-history', 
+            'exclamation-triangle', 
+            'signpost-split', 
+            'truck', 
+            'briefcase'
+        ],
+        menu_icon="cast",
+        default_index=0,
+        styles={
+            "container": {"padding": "0!important", "background-color": "transparent"},
+            "icon": {"color": "#818cf8", "font-size": "18px"}, 
+            "nav-link": {
+                "font-size": "15px", 
+                "text-align": "left", 
+                "margin": "0px", 
+                "--hover-color": "rgba(99, 102, 241, 0.1)",
+                "color": "#cbd5e1"
+            },
+            "nav-link-selected": {
+                "background-color": "rgba(99, 102, 241, 0.2)", 
+                "color": "#ffffff",
+                "border-left": "4px solid #818cf8",
+                "font-weight": "600"
+            },
+        }
+    )
 
 st.sidebar.markdown("---")
 st.sidebar.markdown("""
