@@ -179,6 +179,7 @@ page = st.sidebar.radio(
         "Bottleneck Monitor",
         "Corridor Intelligence",
         "FTL vs Carting",
+        "Upgrade Simulator",
         "Network Operations Command Center"
     ],
     label_visibility="collapsed"
@@ -292,6 +293,9 @@ elif page == "Corridor Intelligence":
     render(data)
 elif page == "FTL vs Carting":
     from dashboard.pages.ftl_carting_advisor import render
+    render(data)
+elif page == "Upgrade Simulator":
+    from dashboard.pages.upgrade_simulator import render
     render(data)
 elif page == "Network Operations Command Center":
     from dashboard.pages.executive_insights import render
