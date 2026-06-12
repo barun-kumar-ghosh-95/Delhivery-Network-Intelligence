@@ -1,0 +1,415 @@
+﻿================================================================================
+PHASE 0: EXHAUSTIVE DATASET AUDIT
+================================================================================
+
+[1] BASIC DIMENSIONS
+    Rows: 144,867
+    Columns: 24
+    Memory Usage: 62.35 MB
+
+================================================================================
+[2] COMPLETE SCHEMA ANALYSIS
+================================================================================
+
+--- Column: data ---
+    Dtype: str
+    Non-null count: 144,867 / 144,867
+    Null count: 0 (0.00%)
+    Unique values: 2
+    Top 10 values:
+      'training': 104,858 (72.38%)
+      'test': 40,009 (27.62%)
+
+--- Column: trip_creation_time ---
+    Dtype: str
+    Non-null count: 144,867 / 144,867
+    Null count: 0 (0.00%)
+    Unique values: 14817
+    Top 10 values:
+      '2018-09-28 05:23:15.359220': 101 (0.07%)
+      '2018-10-01 05:04:55.268931': 101 (0.07%)
+      '2018-10-03 05:04:14.929361': 101 (0.07%)
+      '2018-09-27 04:47:19.425867': 101 (0.07%)
+      '2018-09-20 04:32:37.405584': 101 (0.07%)
+      '2018-09-24 05:12:53.848469': 101 (0.07%)
+      '2018-10-02 06:05:53.086094': 101 (0.07%)
+      '2018-09-29 05:04:57.639067': 101 (0.07%)
+      '2018-09-19 04:07:34.091798': 101 (0.07%)
+      '2018-09-22 04:55:04.835022': 101 (0.07%)
+
+--- Column: route_schedule_uuid ---
+    Dtype: str
+    Non-null count: 144,867 / 144,867
+    Null count: 0 (0.00%)
+    Unique values: 1504
+    Top 10 values:
+      'thanos::sroute:4029a8a2-6c74-4b7e-a6d8-f9e069fbcea9': 1,812 (1.25%)
+      'thanos::sroute:0456b740-1dad-4929-bbe0-87d8843f5a10': 1,608 (1.11%)
+      'thanos::sroute:dca6268f-741a-4d1a-b1b0-aab13095a366': 1,605 (1.11%)
+      'thanos::sroute:a1b25549-1e77-498f-8538-00292e5bd5a2': 1,285 (0.89%)
+      'thanos::sroute:de5e208e-7641-45e6-8100-4d9fb1e5720d': 1,280 (0.88%)
+      'thanos::sroute:96a80600-40e1-436b-9161-fa68f9e4b0d6': 1,211 (0.84%)
+      'thanos::sroute:bcce7b68-e962-4a29-af24-167e3e926d04': 1,162 (0.80%)
+      'thanos::sroute:69409580-4bf0-4bbf-96fe-9e7bc6582a27': 1,158 (0.80%)
+      'thanos::sroute:7af51efd-ae4d-49bc-9b68-345abe68ace5': 1,085 (0.75%)
+      'thanos::sroute:e2f5faaa-455a-494b-a501-549c3e3081ec': 1,069 (0.74%)
+
+--- Column: route_type ---
+    Dtype: str
+    Non-null count: 144,867 / 144,867
+    Null count: 0 (0.00%)
+    Unique values: 2
+    Top 10 values:
+      'FTL': 99,660 (68.79%)
+      'Carting': 45,207 (31.21%)
+
+--- Column: trip_uuid ---
+    Dtype: str
+    Non-null count: 144,867 / 144,867
+    Null count: 0 (0.00%)
+    Unique values: 14817
+    Top 10 values:
+      'trip-153811219535896559': 101 (0.07%)
+      'trip-153837029526866991': 101 (0.07%)
+      'trip-153854305492910872': 101 (0.07%)
+      'trip-153802363942560700': 101 (0.07%)
+      'trip-153741795740530104': 101 (0.07%)
+      'trip-153776597384821516': 101 (0.07%)
+      'trip-153846035308581166': 101 (0.07%)
+      'trip-153819749763881430': 101 (0.07%)
+      'trip-153733005409156789': 101 (0.07%)
+      'trip-153759210483476123': 101 (0.07%)
+
+--- Column: source_center ---
+    Dtype: str
+    Non-null count: 144,867 / 144,867
+    Null count: 0 (0.00%)
+    Unique values: 1508
+    Top 10 values:
+      'IND000000ACB': 23,347 (16.12%)
+      'IND562132AAA': 9,975 (6.89%)
+      'IND421302AAG': 9,088 (6.27%)
+      'IND411033AAA': 4,061 (2.80%)
+      'IND501359AAE': 3,340 (2.31%)
+      'IND712311AAA': 2,612 (1.80%)
+      'IND160002AAC': 2,450 (1.69%)
+      'IND395023AAA': 2,189 (1.51%)
+      'IND110037AAM': 2,013 (1.39%)
+      'IND560099AAB': 1,958 (1.35%)
+
+--- Column: source_name ---
+    Dtype: str
+    Non-null count: 144,574 / 144,867
+    Null count: 293 (0.20%)
+    Unique values: 1498
+    Top 10 values:
+      'Gurgaon_Bilaspur_HB (Haryana)': 23,347 (16.12%)
+      'Bangalore_Nelmngla_H (Karnataka)': 9,975 (6.89%)
+      'Bhiwandi_Mankoli_HB (Maharashtra)': 9,088 (6.27%)
+      'Pune_Tathawde_H (Maharashtra)': 4,061 (2.80%)
+      'Hyderabad_Shamshbd_H (Telangana)': 3,340 (2.31%)
+      'Kolkata_Dankuni_HB (West Bengal)': 2,612 (1.80%)
+      'Chandigarh_Mehmdpur_H (Punjab)': 2,450 (1.69%)
+      'Surat_HUB (Gujarat)': 2,189 (1.51%)
+      'Delhi_Airport_H (Delhi)': 2,013 (1.39%)
+      'Bengaluru_Bomsndra_HB (Karnataka)': 1,958 (1.35%)
+
+--- Column: destination_center ---
+    Dtype: str
+    Non-null count: 144,867 / 144,867
+    Null count: 0 (0.00%)
+    Unique values: 1481
+    Top 10 values:
+      'IND000000ACB': 15,192 (10.49%)
+      'IND562132AAA': 11,019 (7.61%)
+      'IND421302AAG': 5,492 (3.79%)
+      'IND501359AAE': 5,142 (3.55%)
+      'IND712311AAA': 4,892 (3.38%)
+      'IND110037AAM': 3,769 (2.60%)
+      'IND411033AAA': 3,695 (2.55%)
+      'IND160002AAC': 2,874 (1.98%)
+      'IND131028AAB': 2,796 (1.93%)
+      'IND751002AAB': 2,524 (1.74%)
+
+--- Column: destination_name ---
+    Dtype: str
+    Non-null count: 144,606 / 144,867
+    Null count: 261 (0.18%)
+    Unique values: 1468
+    Top 10 values:
+      'Gurgaon_Bilaspur_HB (Haryana)': 15,192 (10.49%)
+      'Bangalore_Nelmngla_H (Karnataka)': 11,019 (7.61%)
+      'Bhiwandi_Mankoli_HB (Maharashtra)': 5,492 (3.79%)
+      'Hyderabad_Shamshbd_H (Telangana)': 5,142 (3.55%)
+      'Kolkata_Dankuni_HB (West Bengal)': 4,892 (3.38%)
+      'Delhi_Airport_H (Delhi)': 3,769 (2.60%)
+      'Pune_Tathawde_H (Maharashtra)': 3,695 (2.55%)
+      'Chandigarh_Mehmdpur_H (Punjab)': 2,874 (1.98%)
+      'Sonipat_Kundli_H (Haryana)': 2,796 (1.93%)
+      'Bhubaneshwar_Hub (Orissa)': 2,524 (1.74%)
+
+--- Column: od_start_time ---
+    Dtype: str
+    Non-null count: 144,867 / 144,867
+    Null count: 0 (0.00%)
+    Unique values: 26369
+    Top 10 values:
+      '2018-09-21 18:37:09.322207': 81 (0.06%)
+      '2018-10-03 04:55:30.039225': 79 (0.05%)
+      '2018-09-26 05:33:10.899941': 79 (0.05%)
+      '2018-09-21 06:51:50.532257': 79 (0.05%)
+      '2018-10-01 05:16:13.904727': 79 (0.05%)
+      '2018-09-13 04:57:25.708746': 79 (0.05%)
+      '2018-09-15 06:03:01.496238': 79 (0.05%)
+      '2018-09-14 07:13:24.396869': 79 (0.05%)
+      '2018-09-30 05:56:48.299467': 79 (0.05%)
+      '2018-09-27 06:12:46.137400': 79 (0.05%)
+
+--- Column: od_end_time ---
+    Dtype: str
+    Non-null count: 144,867 / 144,867
+    Null count: 0 (0.00%)
+    Unique values: 26369
+    Top 10 values:
+      '2018-09-24 09:59:15.691618': 81 (0.06%)
+      '2018-10-05 11:15:01.115906': 79 (0.05%)
+      '2018-09-28 12:13:41.675546': 79 (0.05%)
+      '2018-09-23 13:03:50.216955': 79 (0.05%)
+      '2018-10-03 10:26:35.030631': 79 (0.05%)
+      '2018-09-15 10:44:35.527660': 79 (0.05%)
+      '2018-09-17 10:17:10.791475': 79 (0.05%)
+      '2018-09-16 17:00:03.263746': 79 (0.05%)
+      '2018-10-02 10:36:25.970169': 79 (0.05%)
+      '2018-09-29 12:11:18.125562': 79 (0.05%)
+
+--- Column: start_scan_to_end_scan ---
+    Dtype: float64
+    Non-null count: 144,867 / 144,867
+    Null count: 0 (0.00%)
+    Unique values: 1915
+    Min: 20.0
+    Max: 7898.0
+    Mean: 961.2630
+    Median: 449.0000
+    Std: 1037.0128
+    Skewness: 1.1106
+    Kurtosis: -0.0511
+    Q1: 161.0000, Q3: 1634.0000, IQR: 1473.0000
+    Outlier %: 0.26%
+    Zero count: 0
+    Negative count: 0
+
+--- Column: is_cutoff ---
+    Dtype: bool
+    Non-null count: 144,867 / 144,867
+    Null count: 0 (0.00%)
+    Unique values: 2
+    Top 10 values:
+      'True': 118,749 (81.97%)
+      'False': 26,118 (18.03%)
+
+--- Column: cutoff_factor ---
+    Dtype: int64
+    Non-null count: 144,867 / 144,867
+    Null count: 0 (0.00%)
+    Unique values: 501
+    Min: 9
+    Max: 1927
+    Mean: 232.9266
+    Median: 66.0000
+    Std: 344.7556
+    Skewness: 1.9921
+    Kurtosis: 3.4012
+    Q1: 22.0000, Q3: 286.0000, IQR: 264.0000
+    Outlier %: 11.90%
+    Zero count: 0
+    Negative count: 0
+
+--- Column: cutoff_timestamp ---
+    Dtype: str
+    Non-null count: 144,867 / 144,867
+    Null count: 0 (0.00%)
+    Unique values: 93180
+    Top 10 values:
+      '2018-09-24 05:19:20': 40 (0.03%)
+      '2018-09-24 05:19:21': 33 (0.02%)
+      '2018-09-14 05:29:26': 19 (0.01%)
+      '2018-09-24 07:21:24': 18 (0.01%)
+      '2018-09-18 05:19:27': 17 (0.01%)
+      '2018-09-14 02:35:24': 17 (0.01%)
+      '2018-09-24 05:11:21': 16 (0.01%)
+      '2018-09-26 03:31:21': 16 (0.01%)
+      '2018-09-21 05:03:23': 16 (0.01%)
+      '2018-09-20 02:39:49': 15 (0.01%)
+
+--- Column: actual_distance_to_destination ---
+    Dtype: float64
+    Non-null count: 144,867 / 144,867
+    Null count: 0 (0.00%)
+    Unique values: 144515
+    Min: 9.00004535977208
+    Max: 1927.4477046975032
+    Mean: 234.0734
+    Median: 66.1266
+    Std: 344.9900
+    Skewness: 1.9911
+    Kurtosis: 3.3977
+    Q1: 23.3559, Q3: 286.7089, IQR: 263.3530
+    Outlier %: 12.42%
+    Zero count: 0
+    Negative count: 0
+
+--- Column: actual_time ---
+    Dtype: float64
+    Non-null count: 144,867 / 144,867
+    Null count: 0 (0.00%)
+    Unique values: 3182
+    Min: 9.0
+    Max: 4532.0
+    Mean: 416.9275
+    Median: 132.0000
+    Std: 598.1036
+    Skewness: 2.0681
+    Kurtosis: 3.9629
+    Q1: 51.0000, Q3: 513.0000, IQR: 462.0000
+    Outlier %: 11.48%
+    Zero count: 0
+    Negative count: 0
+
+--- Column: osrm_time ---
+    Dtype: float64
+    Non-null count: 144,867 / 144,867
+    Null count: 0 (0.00%)
+    Unique values: 1531
+    Min: 6.0
+    Max: 1686.0
+    Mean: 213.8683
+    Median: 64.0000
+    Std: 308.0111
+    Skewness: 2.0452
+    Kurtosis: 3.7558
+    Q1: 27.0000, Q3: 257.0000, IQR: 230.0000
+    Outlier %: 12.15%
+    Zero count: 0
+    Negative count: 0
+
+--- Column: osrm_distance ---
+    Dtype: float64
+    Non-null count: 144,867 / 144,867
+    Null count: 0 (0.00%)
+    Unique values: 138046
+    Min: 9.0082
+    Max: 2326.1991000000003
+    Mean: 284.7713
+    Median: 78.5258
+    Std: 421.1193
+    Skewness: 2.0482
+    Kurtosis: 3.7344
+    Q1: 29.9147, Q3: 343.1933, IQR: 313.2786
+python : Traceback (most recent call last):
+At line:1 char:1
++ python scripts\phase0_audit.py 2>&1 | Out-File -Encoding UTF8 "script ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Traceback (most recent call last)::String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  File "C:\Users\barun\OneDrive\Desktop\project-summer\scripts\phase0_audit.py", line 89, in <module>
+    print(f"  {status} | {col:40s} | {int(row['count']):>8,} ({row['percentage']:.2f}%)")
+  File "C:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\encodings\cp1252.py", line 19, in encode
+    Outlier %: 12.30%
+    Zero count: 0
+    Negative count: 0
+
+--- Column: factor ---
+    Dtype: float64
+    Non-null count: 144,867 / 144,867
+    Null count: 0 (0.00%)
+    Unique values: 45641
+    Min: 0.144
+    Max: 77.38709677419355
+    Mean: 2.1201
+    Median: 1.8571
+    Std: 1.7154
+    Skewness: 17.4908
+    Kurtosis: 491.1776
+    Q1: 1.6043, Q3: 2.2135, IQR: 0.6092
+    Outlier %: 7.89%
+    Zero count: 0
+    Negative count: 0
+
+--- Column: segment_actual_time ---
+    Dtype: float64
+    Non-null count: 144,867 / 144,867
+    Null count: 0 (0.00%)
+    Unique values: 747
+    Min: -244.0
+    Max: 3051.0
+    Mean: 36.1961
+    Median: 29.0000
+    Std: 53.5712
+    Skewness: 16.8274
+    Kurtosis: 494.4964
+    Q1: 20.0000, Q3: 40.0000, IQR: 20.0000
+    Outlier %: 6.42%
+    Zero count: 1,952
+    Negative count: 21
+
+--- Column: segment_osrm_time ---
+    Dtype: float64
+    Non-null count: 144,867 / 144,867
+    Null count: 0 (0.00%)
+    Unique values: 214
+    Min: 0.0
+    Max: 1611.0
+    Mean: 18.5075
+    Median: 17.0000
+    Std: 14.7760
+    Skewness: 19.6396
+    Kurtosis: 1444.5612
+    Q1: 11.0000, Q3: 22.0000, IQR: 11.0000
+    Outlier %: 4.40%
+    Zero count: 2,347
+    Negative count: 0
+
+--- Column: segment_osrm_distance ---
+    Dtype: float64
+    Non-null count: 144,867 / 144,867
+    Null count: 0 (0.00%)
+    Unique values: 113799
+    Min: 0.0
+    Max: 2191.4037000000003
+    Mean: 22.8290
+    Median: 23.5130
+    Std: 17.8607
+    Skewness: 26.5854
+    Kurtosis: 2317.3333
+    Q1: 12.0701, Q3: 27.8133, IQR: 15.7431
+    Outlier %: 2.98%
+    Zero count: 1,536
+    Negative count: 0
+
+--- Column: segment_factor ---
+    Dtype: float64
+    Non-null count: 144,867 / 144,867
+    Null count: 0 (0.00%)
+    Unique values: 5675
+    Min: -23.444444444444443
+    Max: 574.25
+    Mean: 2.2184
+    Median: 1.6842
+    Std: 4.8475
+    Skewness: 47.3728
+    Kurtosis: 4037.3887
+    Q1: 1.3478, Q3: 2.2500, IQR: 0.9022
+    Outlier %: 9.65%
+    Zero count: 235
+    Negative count: 2,365
+
+================================================================================
+[3] MISSING VALUE ANALYSIS
+================================================================================
+
+Missing values by column (sorted):
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u26a0' in position 2: character maps to <undefined>

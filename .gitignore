@@ -1,0 +1,25 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venv/
+env/
+ENV/
+.venv/
+
+# IDE files
+.vscode/
+.idea/
+
+# Large files / Final ZIPs
+*.zip
+*.csv
+!delivery_data_sample.csv
+
+# macOS
+.DS_Store
+
+# Streamlit
+.streamlit/secrets.toml
