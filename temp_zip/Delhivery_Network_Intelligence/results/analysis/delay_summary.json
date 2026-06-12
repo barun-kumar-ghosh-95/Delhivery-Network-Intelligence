@@ -1,0 +1,9 @@
+{
+  "total_corridors": 2508,
+  "healthy_pct": 6.419457735247209,
+  "moderate_pct": 41.94577352472089,
+  "severe_pct": 35.16746411483253,
+  "critical_pct": 16.46730462519936,
+  "avg_delay_ratio": 2.460937765572082,
+  "median_delay_ratio": 2.022763906756432
+}
