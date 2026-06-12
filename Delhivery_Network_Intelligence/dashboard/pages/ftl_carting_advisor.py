@@ -8,7 +8,9 @@ def render(data):
     st.markdown('<h1 class="main-title"> FTL vs Carting Advisor</h1>', unsafe_allow_html=True)
     
     summary = data.get('summary', {})
-    corridors = data.get('classified_corridors') or data.get('corridor_stats')
+    corridors = data.get('classified_corridors')
+    if corridors is None:
+        corridors = data.get('corridor_stats')
     test_trips = data.get('test_trips')
     
     acc = summary.get('ftl_accuracy', 0)
