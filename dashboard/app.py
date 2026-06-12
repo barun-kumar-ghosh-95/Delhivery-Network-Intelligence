@@ -164,6 +164,11 @@ st.markdown("""
         color: #ffffff;
         font-weight: 600;
     }
+    
+    /* Hide native Streamlit sidebar navigation */
+    [data-testid="stSidebarNav"] {
+        display: none;
+    }
 </style>
 """, unsafe_allow_html=True)
 
